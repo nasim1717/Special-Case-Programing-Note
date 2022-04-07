@@ -1,0 +1,48 @@
+// codeforcses problem A. Integer Moves 1657
+
+#include<bits/stdc++.h>
+#include<math.h>
+#define ll long long
+#define vl vector<ll>
+#define vi vector<int>
+#define v2 vector<vector<int>>
+#define pb push_back
+#define nl endl
+#define yes "YES"
+#define no "NO"
+#define mod 1000000007
+#define mod1 998244353
+#define ull unsigned long long
+#define     in_range(i,x,y)    for(int i=x;i<y;i++)
+#define     in_range1(i,x,y)    for(int i=x;i<=y;i++)
+#define st_input for(int i=x; i<y; i++) {cin>>st[i];}
+using namespace std;
+bool ans(ll n){
+    ll y = sqrt(n);
+    double x = sqrt(n);
+    return ((double)x - (double)y==0.00);
+}
+void solve(){
+    ll x,y;
+    cin>>x>>y;
+    if(x==0 and y==0){
+        cout<<0<<nl;
+        return;
+    }
+
+    x = pow(x,2);
+    y = pow(y,2);
+    if(ans(x+y))
+        cout<<1<<nl;
+    else cout<<2<<nl;
+
+}
+int main(){
+    ll i,tc,n,ans;
+    cin>>tc;
+    while(tc--){
+       solve();
+
+    }
+return 0;
+}
