@@ -1,0 +1,46 @@
+/// codeforces problem   A. Simply Strange Sort
+
+#include<bits/stdc++.h>
+#include<math.h>
+#define ll long long
+#define vl vector<ll>
+#define vi vector<int>
+#define v2 vector<vector<int>>
+#define pb push_back
+#define nl endl
+#define yes "YES"
+#define no "NO"
+#define mod 1000000007
+#define mod1 998244353
+#define ull unsigned long long
+#define     in_range(i,x,y)    for(int i=x;i<y;i++)
+#define     in_range1(i,x,y)    for(int i=x;i<=y;i++)
+#define st_input for(int i=x; i<y; i++) {cin>>st[i];}
+using namespace std;
+void solve(){
+    ll n,i,j,a,b,c,k,x,y=0,z;
+    cin>>n;
+    vl ar(n);
+    in_range(i,0,n){
+        cin>>ar[i];
+    }
+    int cnt=0;
+    while(!is_sorted(ar.begin(),ar.end())){
+       for(i=cnt%2; i+1<n; i+=2){
+            if(ar[i]>ar[i+1]){
+                swap(ar[i],ar[i+1]);
+            }
+       }
+       cnt++;
+    }
+  cout<<cnt<<nl;
+}
+int main(){
+    ll i,tc,n,ans;
+    cin>>tc;
+    while(tc--){
+       solve();
+    }
+ 
+return 0;
+}
