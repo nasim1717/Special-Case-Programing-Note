@@ -1,0 +1,3 @@
+//// Josephus Problem lightoj
+
+(josephus(n - 1) + k-1) % n + 1;
