@@ -1,0 +1,3 @@
+///codeforces  C. Recover an RBS problem
+
+string cheker = string(req_op-1,'(')+string(1,')')+string(1,'(')+string(req_cp-1,')');
