@@ -1,0 +1,23 @@
+//// Slide Window Technique
+/// Codeforces Problem D. Black and White Stripe
+
+void solve(){
+    ll n,m,u,v,i,j,k,x;
+    string st,ss;
+    cin>>n>>m;
+    cin>>st;
+    ll len=st.size(),ans=LLONG_MAX,cnt=0;
+    for(i=0; i<m; i++){
+        if(st[i]=='W')
+            cnt++;
+    }
+    
+    ans = cnt;
+    for(i=m; i<len; i++){
+        if(st[i]=='W')
+            cnt++;
+        if(st[i-m]=='W')cnt--;
+        ans = min(ans,cnt);
+    }
+    cout<<ans<<nl;
+}
